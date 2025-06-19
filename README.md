@@ -1,3 +1,13 @@
+# Open English Wordnet Fork
+This is a **fork** of Open English Wordnet with the following branches:
+
+* the *main* branch is (once in a while) synced from the upstream oewn main branch.
+* the *oewn_with_usage* branch moves the examples that are not examples but actually usage notes to a **usage** section.
+* the *oewn_with_formatted_examples* branch **formats** the examples with proper punctuation and capitalization (based on *oewn_with_usage* branch).
+* the *oewn_with_collocations* branch merges SyntagNet collocations into a **collocation** section (based on *oewn_with_formatted_examples* branch). Please note this branch has a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence to align with SyntagNet.
+
+The following is the original README:
+
 # Open English Wordnet
 
 Open English Wordnet is a lexical network of the English language grouping words into synsets and linking them according
