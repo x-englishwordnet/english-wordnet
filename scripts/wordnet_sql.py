@@ -113,6 +113,7 @@ class SQLLexicon:
                 sense = Sense(f"{escape_lemma(lemma)}%pseudo:{pos}:{idx+1}",
                               f"{prefix}-{synset_id}", None, -1)
                 entry.add_sense(sense)
+            print(f"SQL PSEUDO {entry.lemma} {entry.pos} {entry.synsets}")
             yield entry
         cursor.close()
 
@@ -130,7 +131,7 @@ class SQLLexicon:
         cursor.execute("SELECT COUNT(*) FROM synsets")
         count = cursor.fetchone()[0]
         cursor.close()
-        returncount
+        return count
 
     def __str__(self):
         return "Lexicon with ID %s and %d entries and %d synsets" % (

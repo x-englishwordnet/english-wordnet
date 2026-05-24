@@ -114,16 +114,20 @@ class Lexicon:
             for s in self.entry_by_id(e).senses:
                 if s.synset == synset_id:
                     return e
+        print(f"NEW PSEUDO ({lemma}, {synset_id[-1]}) -> + {synset_id}")
         self._pseudo_entries[(lemma, synset_id[-1])].append(synset_id)
         return None
 
     def pseudo_entries(self, prefix):
-        for (lemma, pos), synsets in self._pseudo_entries:
+        for (lemma, pos) in self._pseudo_entries:
+            synsets = self._pseudo_entries[(lemma,pos)]
+            print(f"PSEUDO {lemma} {pos} {synsets}")
             entry = LexicalEntry(f"{prefix}-{escape_lemma(lemma)}-{pos}")
             entry.set_lemma(Lemma(lemma, PartOfSpeech(pos)))
             for idx, synset in enumerate(synsets):
-                sense = Sense(map_sense_key(f"{escape_lemma(lemma)}%pseudo:{pos}:{idx+1}"),
-                               f"{prefix}-{synset}", None, -1)
+                #sk = map_sense_key(f"{escape_lemma(lemma)}%pseudo:{pos}:{idx+1}")
+                sk = f"{escape_lemma(lemma)}%pseudo:{pos}:{idx+1}"
+                sense = Sense(sk, f"{prefix}-{synset}", None, -1)
                 entry.add_sense(sense)
             yield entry
 
@@ -162,6 +166,7 @@ class Lexicon:
         for entry in sorted(self._entries, key=lambda x: x.id):
             entry.to_xml(xml_file, self.comments)
         for entry in self.pseudo_entries(self.id):
+            # print(f"PSEUDO {entry}")
             entry.to_xml(xml_file, self.comments)
         for synset in sorted(self._synsets, key=lambda x: x.id):
             synset.to_xml(xml_file, self.comments)
@@ -319,6 +324,7 @@ class Synset:
         self.examples.append(example)
 
     def to_xml(self, xml_file, comments):
+        return
         if self.id in comments:
             xml_file.write("""    <!-- %s -->
 """ % comments[self.id])
