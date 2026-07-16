@@ -9233,8 +9233,7 @@
   definition:
   - in a metonymic manner
   example:
-  - \'The Pentagon\' is often used metonymically to refer to the Department of Defense
-    rather than the building itself.
+  - "‘The Pentagon’ is often used metonymically to refer to the Department of Defense"
   ili: i19026
   members:
   - metonymically
@@ -12441,7 +12440,7 @@
   partOfSpeech: r
 00178467-r:
   definition:
-  - repeatedly
+  - repeated many times
   example:
   - the unknown word turned up over and over again in the text
   ili: i19349
@@ -36036,11 +36035,26 @@
   - dead
   - short
   partOfSpeech: r
+81519324-r:
+  definition:
+  - under that
+  domain_topic:
+  - 08458195-n
+  example:
+  - source: SemCor
+    text: so construed as to deprive the owner of any background patent relating thereto
+      of such rights as he may have thereunder
+  - source: https://www.federalregister.gov/documents/2021/01/11/2020-25236/revisions-to-civil-penalty-amounts
+    text: A person who knowingly violates a requirement of the Federal hazardous material
+      transportation law, an order issued thereunder
+  members:
+  - thereunder
+  partOfSpeech: r
 90003183-r:
   definition:
   - reacting to a stupid but cute action
   members:
-  - derp
+  - derpily
   partOfSpeech: r
   source: Colloquial WordNet
 91000331-r:
