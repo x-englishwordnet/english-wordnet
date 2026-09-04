@@ -722,7 +722,6 @@
   example:
   - the mail handles billions of items every day
   - he works for the United States mail service
-  - in England they call mail ‘the post’
   hypernym:
   - 06262268-n
   ili: i69425
@@ -19260,8 +19259,6 @@
   definition:
   - a program during which well-known people discuss a topic or answer questions telephoned
     in by the audience
-  example:
-  - in England they call a talk show a ‘chat show’
   hypernym:
   - 06631935-n
   ili: i71260
@@ -19269,6 +19266,8 @@
   - talk show
   - chat show
   partOfSpeech: n
+  usage:
+  - in England they call a talk show a ‘chat show’
 06632974-n:
   definition:
   - a program in which the audience participates by telephone
@@ -32358,8 +32357,6 @@
   definition:
   - a punctuation mark (‘.’) placed at the end of a declarative sentence to indicate
     a full stop or after abbreviations
-  example:
-  - in England they call a period a ‘stop’
   hypernym:
   - 06854415-n
   ili: i72483
@@ -32370,6 +32367,8 @@
   - stop
   - full point
   partOfSpeech: n
+  usage:
+  - in England they call a period a ‘stop’
 06856888-n:
   definition:
   - (usually plural) one of a series of points (‘…’) indicating that something has
